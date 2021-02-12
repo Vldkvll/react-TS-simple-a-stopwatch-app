@@ -8,6 +8,7 @@ import "./Main.css";
 const Main = () => {
     const [timeInSeconds, setTimeInSeconds] = useState<number>(0);
     const [timerArray, setTimerArray] = useState<Array<number | string>>([]);
+    const [IsDisabled, setIsDisabled] = useState<Array<number | string>>([]);
 
     useEffect(() => {
         let timeArray: Array<number | string> = calculateTimer(timeInSeconds);

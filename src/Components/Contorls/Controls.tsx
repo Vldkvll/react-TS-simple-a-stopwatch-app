@@ -9,30 +9,34 @@ type Props = {
 const Controls = (props: Props) => {
     const { setTimeInSeconds } = props;
     const [intervalId, setIntervalId] = useState<number>(0)
+    const [IsDisabled, setIsDisabled] = useState<boolean>(true);
 
     const handlePlayButton = () => {
-//  console.log('handlePlayButton')
+ console.log('handlePlayButton')
 
         let interval:any = setInterval(()=>{
             setTimeInSeconds((prevState:number|string) => +prevState + 1 )
         }, 1000)
 
         setIntervalId(interval)
+        setIsDisabled(false)
     }
-
+    
     const handleStopButton = () => {
         clearInterval(intervalId)
+        setIsDisabled(true)
     }
-
+    
     const handleResetButton = () => {
         clearInterval(intervalId);
         setTimeInSeconds(0)
+        setIsDisabled(true)
     }
 
     return (
         <section>
             <ul>
-                <li className="list-item" onClick={handlePlayButton} >
+                <li className="list-item" onClick={ IsDisabled ? handlePlayButton : undefined} >
                     <a href="#" className="round green">
                         Play
                         <span className="round">                        
