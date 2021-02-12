@@ -21,11 +21,12 @@ const Controls = (props: Props) => {
     }
 
     const handleStopButton = () => {
-
+        clearInterval(intervalId)
     }
 
     const handleResetButton = () => {
-
+        clearInterval(intervalId);
+        setTimeInSeconds(0)
     }
 
     return (

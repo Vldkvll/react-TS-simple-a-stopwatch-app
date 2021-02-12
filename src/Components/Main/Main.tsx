@@ -17,7 +17,34 @@ const Main = () => {
 
     return (
         <main>
-            <section className="main-section">
+            <section className="title-section">
+                <div className="title-section__block">
+                    <p>h</p>
+                    <div className="title-section__block-litle" >
+                        <span>o</span>
+                        <span>u</span>
+                        <span>r</span>
+                    </div>
+                </div>
+                <div className="title-section__block">
+                    <p>m</p>
+                    <div className="title-section__block-litle" >
+                        <span>i</span>
+                        <span>n.</span>
+                        {/* <span>r</span> */}
+                    </div>
+                </div>
+                <div className="title-section__block">
+                    <p>s</p>
+                    <div className="title-section__block-litle" >
+                        <span></span>
+                        <span>e</span>
+                        <span>s.</span>
+                        {/* <span>r</span> */}
+                    </div>
+                </div>
+            </section>
+            <section className="timer-section">
                 <p className="timer-text">{timerArray[0]}</p>
                 <span>:</span>
                 <p className="timer-text">{timerArray[1]}</p>
